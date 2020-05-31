@@ -16,10 +16,10 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
 <style>
     body{
-        background-color:rgba(108, 135, 156, 0.623);
+        background-color:#ffffff;
     }
     .jumbotron{
-        background-color:#727ead88;
+        background-color:#000000;
     }
     .carousel-inner img {
     width:100%;
@@ -28,15 +28,21 @@
     background-size:cover;
 
   }
+  h3, p, span, h2 {
+      color:white;
+  }
   .vertical-center {
     display: inline-block;
     vertical-align: middle;
     display: flex;
     align-items: center;
     }
+    /*
     .logo {
-        width:15%;
+        width:2%;
     }
+    */
+    /*
     .navbar-nav{
         padding-left: 1%;
         width:100%
@@ -47,13 +53,15 @@
         width:7%;
         
     }
+    */
 </style>    
 </head>
     <body>
-        <nav class="navbar navbar-expand-md bg-secondary navbar-dark fixed-top">
+        <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
             <!-- Brand -->
-            <img class="navbar-brand logo" href="https://www.servingslice.org" src="logo.png"/>
-            
+            <a class ="navbar-brand" href="https://www.servingslice.org">
+            <img src="logo.png" class = "logo" style="width:250px;"/>
+            </a>
           
             <!-- Toggler/collapsible Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
