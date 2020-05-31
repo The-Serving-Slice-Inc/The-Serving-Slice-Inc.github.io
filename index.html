@@ -115,12 +115,18 @@
                 });
               });
               </script>
+        <div class="jumbotron">
+            <div class="container text-center">
+                <h3>Mission Statement</h3>
+                <p></p>
+            </div>
+        </div>
         <div class = "container-fluid">
             <div class = "row">
                 <div class = "col-md-6">
                 <div class="container text-center" style="padding:100px">
                 <div class="jumbotron">
-                <h2><span class="count">200000</span> chocolate donuts!</h2>
+                <h2><span id="scroll-to" class="count">200000</span> chocolate donuts!</h2>
                 </div>
                 </div>
                 </div>
@@ -140,7 +146,15 @@
             
         </div>
         <script>
-            $('.count').each(function () {
+            var hasran = false;
+            $(window).scroll(function() {
+            var hT = $('#scroll-to').offset().top,
+            hH = $('#scroll-to').outerHeight(),
+            wH = $(window).height(),
+             wS = $(this).scrollTop();
+            if (wS > (hT+hH-wH)){
+            if(hasran == false){
+                $('.count').each(function () {
             $(this).prop('Counter',0).animate({
             Counter: $(this).text()
             }, {
@@ -149,8 +163,14 @@
             step: function (now) {
             $(this).text(Math.ceil(now));
             }
+            ,
+            });  
             });
+            hasran = true;
+            }
+            }
             });
+            
         </script>
     </body> 
 </html>
