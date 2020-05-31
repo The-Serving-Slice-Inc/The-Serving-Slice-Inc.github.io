@@ -22,14 +22,23 @@
         background-size: 60% 60%
     }
     .jumbotron{
+        /*
         background: none;
+        */
     }
     .carousel-inner img {
     width:100%;
     height: 60%;
 
     background-size:cover;
+
   }
+  .vertical-center {
+    display: inline-block;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    }
 </style>    
 </head>
     <body>
@@ -106,14 +115,19 @@
                 });
               });
               </script>
-        <div class = "container-fluid" style="padding:50px">
+        <div class = "container-fluid">
             <div class = "row">
-                <div class = "col-md-4">
-
+                <div class = "col-md-6">
+                <div class="container text-center" style="padding:100px">
+                <div class="jumbotron">
+                <h2><span class="count">200000</span> chocolate donuts!</h2>
                 </div>
-                <div class="col-md-4"></div>
-                <div class="col-md-4">
-                    <a class="twitter-timeline" data-height="600" data-theme="light" href="https://twitter.com/POTUS?ref_src=twsrc%5Etfw">Tweets by POTUS</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>    
+                </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="container" style="padding:50px">
+                        <a class="twitter-timeline" data-height="600" data-theme="light" href="https://twitter.com/theservingslice?ref_src=twsrc%5Etfw">Tweets by theservingslice</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
                 </div>
             </div>
         </div>
@@ -121,8 +135,22 @@
             <div class="jumbotron text-center">
                 <p>Website is online at www.servingslice.org</p>
                 <p>Please note that the website is in development</p>
+                
             </div>
             
         </div>
+        <script>
+            $('.count').each(function () {
+            $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+            }, {
+            duration: 2000,
+            easing: 'swing',
+            step: function (now) {
+            $(this).text(Math.ceil(now));
+            }
+            });
+            });
+        </script>
     </body> 
 </html>
