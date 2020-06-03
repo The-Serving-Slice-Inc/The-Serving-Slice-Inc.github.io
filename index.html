@@ -15,8 +15,9 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
 <style>
-    body, .colored{
+    body{
         background-color:#b3e0ff85;
+        margin-bottom: 60px; 
     }
     .jumbotron{
         background-color:#013444a4;
@@ -28,11 +29,15 @@
     background-size:cover;
 
   }
-  h3, p, span, h2 {
+  .colored{
+    background-color:#006685;
+  }
+  h3, p, span, h2, small, h1, h5, h4{
       color:white;
   }
   .nav-link, .dropdown-item {
       color:black;
+      font-size:large;
   }
   .vertical-center {
     display: inline-block;
@@ -58,13 +63,25 @@
     }
     */
     .navbar-inner {
-    background:transparent;
+    opacity: 100%;
     }
+    .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px; 
+    line-height: 60px; 
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
 
 </style>    
 </head>
     <body>
-        <nav class="navbar navbar-expand-sm navbar-light fixed-top colored">
+        <nav class="navbar navbar-expand-sm navbar-dark fixed-top colored">
             <!-- Brand -->
             <a class ="navbar-brand" href="https://www.servingslice.org">
             <img src="logo.png" class = "logo" style="width:250px;"/>
@@ -108,13 +125,13 @@
                 <!-- The slideshow -->
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="/pictures/bridge.jpg" alt="Bridge" width="1100" height="500">
+                    <img src="https://www.servingslice.org/pictures/bridge.jpg" alt="Bridge" width="1100" height="500">
                   </div>
                   <div class="carousel-item">
-                    <img src="/pictures/chicago.jpg" alt="Chicago" width="1100" height="500">
+                    <img src="https://www.servingslice.org/pictures/chicago.jpg" alt="Chicago" width="1100" height="500">
                   </div>
                   <div class="carousel-item">
-                    <img src="/pictures/sunset.jpg" alt="New York" width="1100" height="500">
+                    <img src="https://www.servingslice.org/pictures/sunset.jpg" alt="New York" width="1100" height="500">
                   </div>
                 </div>
                 
@@ -148,25 +165,46 @@
                 });
               });
               </script>
-        <div class="container-fluid text-center" style="padding-top:2%">
-        <div class="jumbotron">
-                <h3>Mission Statement</h3>
+        
+        
+       
+
+        <div class="container-fluid text-center">
+          <div class="jumbotron" style="margin-top:10px">
+                  <h1 class="display-4">Mission Statement</h1>
+                  <br/>
+                  <h5 class="font-weight-normal" style="line-height: 1.5;">Difficult times require bold actions. The Serving Slice Initiative aspires to collaborate with essential food services across communities in order to provide for those most affected by the COVID-19 pandemic. We accept donations from local restaurants, cafes, and food chains and distribute them to groups in the most need such as senior centers, homeless shelters, and hospitals, free of transportation cost. With every meal packaged and slice of the pie cut, we seek to bring hope to the community in a time when we need it the most.</h5>
+          </div>
+          </div>
+          <br/>
+          <div class="jumbotron jumbotron-fluid ">
+            <div class="container-fluid text-center">
+              <div class="row">
+                <div class="col-md-4"><h1><span id="scroll-to" class="count">462</span><br/><small>juicers</small></h1><br/></div>
+                
+                <div class="col-md-4"><h1><span id="scroll-to" class="count">1573</span><br/><small>poggers</small></h1><br/></div>
                 <br/>
-                <p>Difficult times require bold actions. The Serving Slice Initiative aspires to collaborate with essential food services across communities in order to provide for those most affected by the COVID-19 pandemic. We accept donations from local restaurants, cafes, and food chains and distribute them to groups in the most need such as senior centers, homeless shelters, and hospitals, free of transportation cost. With every meal packaged and slice of the pie cut, we seek to bring hope to the community in a time when we need it the most.</p>
-        </div>
-        </div>
+                <div class="col-md-4"><h1><span id="scroll-to" class="count">102</span><br/><small>weirdchamps</small></h1></div>
+                <br/>
+              </div>
+            </div>
+          </div>
         <div class = "container-fluid">
             <div class = "row">
                 <div class = "col-md-6">
                 <div class="container text-center" style="padding:5%">
                 <div class="jumbotron">
-                <h2><span id="scroll-to" class="count">200000</span> chocolate donuts!</h2>
-                </div>
-                <div class="jumbotron">
-                    <h2><span id="scroll-to" class="count">4000</span> shooting stars!</h2>
-                </div>
-                <div class="jumbotron">
-                    <h2><span id="scroll-to" class="count">74</span> slices of pizza!</h2>
+                <h2  class="display-4">News/Updates</h2>
+                <br/>
+                <br/>
+                <h3>Item #1</h3 >
+                <br/>
+                <h3>Item #2</h3>
+                <br/>
+                <h3>Item #3</h3>
+                <br/>
+                <h3>Item #4</h3>
+                <br/>
                 </div>
                 </div>
                 </div>
@@ -177,6 +215,9 @@
                 </div>
             </div>
         </div>
+
+        
+        
         
         <script>
             var hasran = false;
@@ -228,5 +269,12 @@
             });
             
         </script>
+
+      <footer class="footer colored">
+      <div class="container">
+        <span>The Serving Slice Inc.</span>
+      </div>
+      </footer>
+
     </body> 
 </html>
